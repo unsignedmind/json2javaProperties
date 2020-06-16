@@ -11,7 +11,7 @@ for (let filePath of files) {
     if (err) {
       console.log(err);
     }
-    data = JSON.stringify(flattenJson(JSON.parse(data)), null, os.EOL);
+    data = JSON.stringify(flattenJson(JSON.parse(data)), null, '\t');
     data = json2javaProperties(data);
     saveFile(fileName, data);
   });
@@ -58,7 +58,7 @@ function json2javaProperties(toBeFormatted) {
   // add marked quotation marks again
   toBeFormatted = toBeFormatted.split('\\#').join('\\"');
   // remove empty lines in between
-  toBeFormatted = toBeFormatted.split(os.EOL).join('');
+  toBeFormatted = toBeFormatted.split('\t').join('');
   // remove empty lines at the file start
   toBeFormatted = toBeFormatted.trim();
   return toBeFormatted
