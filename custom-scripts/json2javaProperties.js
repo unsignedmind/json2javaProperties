@@ -8,7 +8,9 @@ const outputPath = process.argv[2];
 for (let filePath of files) {
   const fileName = extractFileName(filePath);
   fs.readFile(path.normalize(filePath), 'utf8', (err, data) => {
-    if (err) return console.log(err);
+    if (err) {
+      console.log(err);
+    }
     data = JSON.stringify(flattenJson(JSON.parse(data)), null, os.EOL);
     data = json2javaProperties(data);
     saveFile(fileName, data);
@@ -76,14 +78,18 @@ function flattenJson(data) {
     } else if (Array.isArray(cur)) {
       for (var i = 0, l = cur.length; i < l; i++)
         recurse(cur[i], prop + "[" + i + "]");
-      if (l === 0) result[prop] = [];
+      if (l === 0) {
+        result[prop] = [];
+      }
     } else {
       var isEmpty = true;
       for (var p in cur) {
         isEmpty = false;
         recurse(cur[p], prop ? prop + "." + p : p);
       }
-      if (isEmpty && prop) result[prop] = {};
+      if (isEmpty && prop) {
+        result[prop] = {};
+      }
     }
   }
   recurse(data, "");
