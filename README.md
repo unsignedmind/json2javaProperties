@@ -18,7 +18,7 @@ Input
     "suffix": "\". Try again."
   },
   "longCommaSentence": "Sentences, which are long, could contain comma chars",
-  "Key with a whitespaces !": "a value"
+  "Key with whitespaces !": "a value"
 }
 ```
 Output
@@ -26,5 +26,5 @@ Output
 quotationMarks.prefix=No results for \"
 quotationMarks.suffix=\". Try again.
 longCommaSentence=Sentences, which are long, could contain comma chars
-Key with a whitespaces !=a value
+Key with whitespaces !=a value
 ```
