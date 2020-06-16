@@ -1,0 +1,25 @@
+{
+  "name": "json2java-properties-formatter",
+  "version": "0.2.0",
+  "description": "Node script to format json files to java properties files",
+  "main": "",
+  "scripts": {
+    "translations-export": "node ./custom-scripts/json2javaProperties.js ./translations/export/ ./translations/de.json ./translations/en-US.json"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/unsignedmind/json2javaProperties.git"
+  },
+  "keywords": [
+    "json",
+    "java",
+    "properties",
+    "formatter"
+  ],
+  "author": "Unsignedmind",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/unsignedmind/json2javaProperties/issues"
+  },
+  "homepage": "https://github.com/unsignedmind/json2javaProperties#readme"
+}

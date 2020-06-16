@@ -1,0 +1,8 @@
+{
+  "quotationMarks": {
+    "prefix": "No results for \"",
+    "suffix": "\". Try again."
+  },
+  "longCommaSentence": "Sentences, which are long, could contain comma chars",
+  "Key with a whitespaces !": "a value"
+}
